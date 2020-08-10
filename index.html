@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Luckiest+Guy&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Jogo do Balão</title>
+</head>
+<body>
+    <header>
+        <div class="header-login">
+            <h1>Jogo do Pontinho !!</h1>
+        </div>
+    </header>
+    <Main>
+        <div class="form-container">
+            <form action="">
+                <h2>Login</h2>
+
+                <div class="input-container">
+                    <h3>Nome de usuário:</h3>
+                    <input type="text" id="nomeUsuario">
+                </div>
+
+                <div class="input-container">
+                    <h3>Entrar com código:</h3>
+                    <input type="text" name="" id="codigo">
+                </div>
+
+                <div class="input-container">
+                    <input 
+                    type="button" 
+                    value="jogar"
+                    onclick="return closeLogin(this)"
+                    id="buttonPlay"
+                    >
+                </div>
+                <hr>
+                <div class="input-container">
+                    <input 
+                    type="button" 
+                    value="criar_sala"
+                    onclick="return closeLogin(this)"
+                    id="buttonCreateRoom"               
+                    >
+                </div>
+            </form>
+        </div>
+    </Main>
+
+    <script src="js/script.js" ></script>
+</body>
+</html>
