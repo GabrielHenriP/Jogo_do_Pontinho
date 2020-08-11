@@ -11,7 +11,7 @@ function closeLogin(objeto){
             alert('Digite o nome de usuário e o código da sala para jogar')
         } else {
             form.parentNode.removeChild(form);
-            botaoInicial();
+            gerarAutomaticamenteBalao()
             return;
         }
 
