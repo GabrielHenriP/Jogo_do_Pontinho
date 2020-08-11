@@ -17,7 +17,7 @@ html, body {
     height: 100%;
     width: 100%;
     background-color: var(--color-background);
-    padding: 0px 5%;
+    padding: 0px 1%;
 }
 
 header {
@@ -44,6 +44,7 @@ header .header-login h1 {
     color: rgb(218, 181, 216);
     transition: font-size .2s;
     font-family: 'Luckiest Guy', cursive;
+    font-size: 27px;
 }
 
 header .header-login h1:hover {
