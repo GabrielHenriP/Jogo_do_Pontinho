@@ -47,11 +47,10 @@ header .header-inGame {
     height: 100%;
     padding: 20px 0;
     background-color: rgba(164, 181, 231,0);
-    display: flex;
+    display: none;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    display: none;
 }
 
 header .header-login h1 {

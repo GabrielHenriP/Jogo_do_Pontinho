@@ -21,6 +21,7 @@ function closeLogin(objeto){
             alert('Digite seu nome de usuário para criar a sala')
         } else {
             form.parentNode.removeChild(form);
+            changeHeader();
             botaoInicial();
             return;
         }
@@ -75,6 +76,20 @@ function iniciarJogo(objeto) {
     document.body.removeChild(objeto)
     gerarAutomaticamenteBalao()
     
+}
+
+function changeHeader(){
+    
+    let header_inGame = document.body.querySelector('.header-inGame');
+    header_inGame.setAttribute('style', 'display:flex')
+    console.log(header_inGame.id)
+    
+
+    let header_login = document.body.querySelector('.header-login');
+    header_login.setAttribute('style', 'display:none')
+    //document.body.header.appendChild(header_inGame);
+    //header_login.parentNode.removeChild(header_login);
+
 }
 
 
