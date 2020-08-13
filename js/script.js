@@ -1,12 +1,14 @@
 let pontos = 0
 
+
+
 function closeLogin(objeto){
     let userName = document.body.querySelector('#nomeUsuario').value;
     let code = document.body.querySelector('#codigo').value;
     let form = document.querySelector('.form-container');
 
-    if( objeto.value === 'jogar' ) {
-        console.log('jogaaar')
+    if( objeto.value === 'Jogar' ) {
+        //console.log('jogaaar')
         if( userName.length === 0 || code.length === 0 ){
             alert('Digite o nome de usuário e o código da sala para jogar')
         } else {
@@ -15,8 +17,8 @@ function closeLogin(objeto){
             return;
         }
 
-    }else if( objeto.value === 'criar_sala'){
-        console.log('criar sssala')
+    }else if( objeto.value === 'Criar sala'){
+       // console.log('criar sssala')
         if( userName.length === 0){
             alert('Digite seu nome de usuário para criar a sala')
         } else {
@@ -29,6 +31,22 @@ function closeLogin(objeto){
     
     
 }
+
+
+function changeHeader(){
+    
+    let header_inGame = document.body.querySelector('.header-inGame');
+    header_inGame.setAttribute('style', 'display:flex')
+    console.log(header_inGame.id)
+    
+
+    let header_login = document.body.querySelector('.header-login');
+    header_login.setAttribute('style', 'display:none')
+    //document.body.header.appendChild(header_inGame);
+    //header_login.parentNode.removeChild(header_login);
+
+}
+
 
 function criarBalao() {
     var balao = document.createElement('div');
@@ -76,20 +94,6 @@ function iniciarJogo(objeto) {
     document.body.removeChild(objeto)
     gerarAutomaticamenteBalao()
     
-}
-
-function changeHeader(){
-    
-    let header_inGame = document.body.querySelector('.header-inGame');
-    header_inGame.setAttribute('style', 'display:flex')
-    console.log(header_inGame.id)
-    
-
-    let header_login = document.body.querySelector('.header-login');
-    header_login.setAttribute('style', 'display:none')
-    //document.body.header.appendChild(header_inGame);
-    //header_login.parentNode.removeChild(header_login);
-
 }
 
 
