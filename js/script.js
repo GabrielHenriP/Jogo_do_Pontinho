@@ -13,6 +13,7 @@ function closeLogin(objeto){
             alert('Digite o nome de usuário e o código da sala para jogar')
         } else {
             form.parentNode.removeChild(form);
+            criarAreaDeJogo();
             gerarAutomaticamenteBalao()
             return;
         }
@@ -52,16 +53,9 @@ function criarBalao() {
     var balao = document.createElement('div');
     balao.setAttribute("class",'balao');
 
-    //var x = Math.floor(Math.random()*window.innerWidth-50);
-    //var y = Math.floor(Math.random()*(window.innerHeight-50)) + 60 ;
-    
-
-    
-
-    let areaDeJogo = document.body.querySelector('.container-do-jogo .area-deJogo')
+    let areaDeJogo = document.body.querySelector('.container-do-jogo .area-deJogo');
 
     let min = 5;
-    let max = 30;
 
     let x = Math.floor(Math.random() * ((areaDeJogo.clientWidth - 30) - min + 1)) + min;
     let y = Math.floor(Math.random() * ((areaDeJogo.clientHeight - 30) - min + 1)) + min;
@@ -73,7 +67,8 @@ function criarBalao() {
 }
 
 function estourarBalao(objeto) {
-    document.body.removeChild(objeto)
+    let areaDeJogo = document.body.querySelector('.container-do-jogo .area-deJogo')
+    areaDeJogo.removeChild(objeto)
 
     pontos++;
     var score = document.getElementById('score')
@@ -84,7 +79,7 @@ function estourarBalao(objeto) {
 
 function gerarAutomaticamenteBalao() {
     
-    setInterval(criarBalao,20)
+    setInterval(criarBalao,500)
     
 }
 
