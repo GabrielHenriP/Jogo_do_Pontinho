@@ -174,16 +174,6 @@ form hr {
     color: rgb(224, 223, 223);
 }
 
-.balao{
-    width: 30px;
-    height: 40px;
-    border-radius: 90% 90% 100% 100%;
-    background-color: black;
-    cursor: pointer;
-    position: absolute;
-    z-index: 1;
-}
-
 .botaodeIniciar{
     display: block;
     margin: 0 auto;
@@ -197,4 +187,32 @@ form hr {
     color: var(--color-font);
     cursor: pointer;
     outline: 0;
+}
+
+main .container-do-jogo {
+    border: 5px solid black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+main .container-do-jogo .area-deJogo {
+    border: 5px solid rgb(197, 11, 11);
+    padding: 20px;
+    position: relative;
+    flex:3;
+}
+
+main .container-do-jogo .ranking {
+    border: 5px solid rgb(32, 7, 143);
+    flex:1;
+}
+
+.balao{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
 }
