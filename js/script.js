@@ -63,7 +63,24 @@ function criarBalao() {
     balao.setAttribute('style','left:'+x+'px; top:'+y+'px');
     balao.setAttribute('onclick','estourarBalao(this)');
 
+    // setar a cor do balão
+    colorirBalão(balao)
+
+
     areaDeJogo.appendChild(balao)
+}
+
+function colorirBalão(objeto) {
+
+    let corDoBalão = Math.floor(Math.random() * ( 90 + 1))
+    console.log(corDoBalão)
+    if( corDoBalão >= 0 && corDoBalão < 30 ) {
+        objeto.style.backgroundColor = "red";
+    }else if( corDoBalão >= 30 && corDoBalão < 60 ) {
+        objeto.style.backgroundColor = "yellow";
+    }else {
+        objeto.style.backgroundColor = "blue";
+    }
 }
 
 function estourarBalao(objeto) {
