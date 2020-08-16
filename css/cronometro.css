@@ -15,6 +15,12 @@ body {
     justify-content: center;
     background-color: whitesmoke;
 }
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
 
 .box {
     background-color: yellowgreen;
@@ -25,7 +31,41 @@ body {
     flex-direction: column;
     justify-content: space-between ;
     align-items: center;
+    margin: 20px;
+    
 }
+
+.box1{
+    transform: translateX(-50px);
+    animation-name: box1 ;
+    animation-duration: 5s;
+    box-shadow: 60px 60px 60px black;
+}
+
+.box2{
+    animation-name: box2 ;
+    animation-duration: 5s;
+    box-shadow: 60px 60px 60px black;
+}
+
+@keyframes box1 {
+    0% {
+        transform: translateX(calc(-100% - 180px));
+        box-shadow: 0 0 0 black;
+    }
+    100% {box-shadow: 60px 60px 60px black;}
+}
+
+@keyframes box2 {
+    0% {
+        transform: translateX(calc(100% + 180px));
+        box-shadow: 0 0 0 black;
+    }
+    100% {box-shadow: 60px 60px 60px black;}
+}
+
+
+
 
 button {
     width: 100%;
